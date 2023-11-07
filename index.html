@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="checkbox" v-model="showBattle" style="display: none" />
+    <label for="battleCheckbox" @click="toggleBattle">[バトル]</label>
+    <p v-if="showBattle">バトル</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

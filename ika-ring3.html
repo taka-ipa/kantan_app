@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>イカリング3</title>
   <link rel="stylesheet" type="text/css" href="ika-ring3.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
   <div class="mainbar">
@@ -89,25 +90,21 @@
         <div>サーモンラン</div>
       </div>
     </div>
-    <input id="acd-check1" class="acd-check" type="checkbox">
-    <label class="acd-label" for="acd-check1">スケジュール</label>
-    <div class="acd-content">
-      <p>レギュラーマッチ</p>
-      <p>バンカラマッチ</p>
-      <p>Xマッチ</p>
-      <p>イベントマッチ</p>
-      <p>サーモンラン</p>
+    <div id="app1">
+      <input type="checkbox" v-model="showText" >
+      <label for="textCheckbox" @click="toggleText">バトル</label>
+      <ul v-if="showText">
+        <li v-for="value in schedule">{{ value }}</li>
+      </ul>
     </div>
-    <input id="acd-check2" class="acd-check" type="checkbox">
-    <label class="acd-label" for="acd-check2">バトル</label>
-    <div class="acd-content">
-      <p>最近</p>
-      <p>レギュラーマッチ</p>
-      <p>バンカラマッチ</p>
-      <p>Xマッチ</p>
-      <p>イベントマッチ</p>
-      <p>プライベートマッチ</p>
+    <div id="app2">
+      <input type="checkbox" v-model="showText" >
+      <label for="textCheckbox" @click="toggleText">バトル</label>
+      <ul v-if="showText">
+        <li v-for="value in schedule">{{ value }}</li>
+      </ul>
     </div>
   </div>
+  <script src="ika-ring3.js"></script>
 </body>
 </html>
