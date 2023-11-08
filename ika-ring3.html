@@ -90,17 +90,24 @@
         <div>サーモンラン</div>
       </div>
     </div>
-    <div id="app1">
-      <input type="checkbox" v-model="showText" >
-      <label for="textCheckbox" @click="toggleText">バトル</label>
-      <ul v-if="showText">
+    <div class="sidebar-tab" id="app1">
+      <input class="checkbox" type="checkbox" v-model="showText" >
+      <label for="textCheckbox" @click="toggleText">スケジュール</label>
+      <ul class="list" v-if="showText">
         <li v-for="value in schedule">{{ value }}</li>
       </ul>
     </div>
-    <div id="app2">
-      <input type="checkbox" v-model="showText" >
+    <div class="sidebar-tab" id="app2">
+      <input class="checkbox" type="checkbox" v-model="showText" >
       <label for="textCheckbox" @click="toggleText">バトル</label>
-      <ul v-if="showText">
+      <ul class="list" v-if="showText">
+        <li v-for="value in schedule">{{ value }}</li>
+      </ul>
+    </div>
+    <div class="sidebar-tab" id="app3">
+      <input class="checkbox" type="checkbox" v-model="showText" >
+      <label for="textCheckbox" @click="toggleText">きろく</label>
+      <ul class="list" v-if="showText">
         <li v-for="value in schedule">{{ value }}</li>
       </ul>
     </div>
